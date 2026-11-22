@@ -83,6 +83,7 @@
   var EN = {
     tours: 'Tours', exhibits: 'Exhibits', courses: 'Courses', articles: 'Articles', contacts: 'Contacts', book: 'Book', menu: 'Menu',
     navLabel: 'Main', language: 'Site language',
+    heroUpdate: 'The site has been updated automatically',
     slogan: 'Touch the computers that started the digital world — and learn to use today’s ones with confidence.',
     heroGo: 'Where shall we start?',
     toursIntro: 'We will walk you through the museum halls and show how computers have changed. Great for families and school classes alike.',

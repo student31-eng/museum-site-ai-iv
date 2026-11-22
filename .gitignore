@@ -1,0 +1,23 @@
+# Локальні налаштування Claude Code і локального сервера
+.claude/
+
+# Робочі документи (не потрібні для сайту)
+handoff.md
+plan.md
+Звіт.md
+research-report.md
+content-plan.md
+ТЗ — Сайт музею.docx
+~$*.docx
+
+# Джерела статей і скрипт генерації (на сайті використовуються готові .html)
+articles/*.md
+tools/
+
+# Системні та тимчасові файли
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+*.tmp
+*.log

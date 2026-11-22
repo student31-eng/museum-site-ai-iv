@@ -1,0 +1,403 @@
+/* Software and Computer Museum — стилі головної сторінки.
+   Значення взято з токенів дизайн-системи музею (tokens.json). */
+
+:root {
+  /* Палітра */
+  --brand-primary: #233a7e;
+  --brand-secondary: #1c4587;
+  --white: #ffffff;
+  --blue-tint-50: #f6f8fc;
+  --blue-tint-100: #eaeef8;
+  --blue-tint-200: #d6deef;
+  --blue-tint-300: #aebbe0;
+
+  /* Шрифти */
+  --font-text: "Rubik", "Segoe UI", Arial, sans-serif;
+  --font-pixel: "Handjet", "IBM Plex Mono", ui-monospace, monospace;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Courier New", monospace;
+
+  /* Відступи */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Рамки, розміри */
+  --border-width: 2px;
+  --border-width-thick: 3px;
+  --border-width-heavy: 4px;
+  --touch-target: 48px;
+  --control-height-l: 52px;
+  --control-height-xl: 64px;
+  --container-max: 1200px;
+  --press-shift: 2px;
+
+  /* Тіні */
+  --shadow-window: 6px 6px 0 0 #233a7e;
+  --shadow-window-m: 4px 4px 0 0 #233a7e;
+  --shadow-button: 4px 4px 0 0 #233a7e;
+  --shadow-button-pressed: 2px 2px 0 0 #233a7e;
+  --shadow-bevel: inset 2px 2px 0 0 #ffffff, inset -2px -2px 0 0 #233a7e;
+  --shadow-pressed: inset 2px 2px 0 0 #233a7e, inset -2px -2px 0 0 #ffffff;
+  --shadow-inset-pressed: inset 3px 3px 0 0 #aebbe0;
+  --shadow-field: inset 2px 2px 0 0 #d6deef;
+  --shadow-field-hover: inset 3px 3px 0 0 #aebbe0;
+}
+
+/* ---------- Теми секцій: світла й синя ----------
+   Синя секція має клас .scm-on-brand; тіло «вікна» завжди світле. */
+.scm,
+.scm-win-body {
+  --background: var(--white);
+  --background-alt: var(--blue-tint-100);
+  --window-titlebar: var(--brand-primary);
+  --window-titlebar-text: var(--white);
+  --text-primary: var(--brand-primary);
+  --text-secondary: var(--brand-secondary);
+  --button: var(--brand-primary);
+  --button-text: var(--white);
+  --button-hover: var(--brand-secondary);
+  --border: var(--brand-primary);
+  --focus: var(--brand-secondary);
+  --error: var(--brand-primary);
+  --error-text: var(--white);
+}
+.scm-on-brand {
+  --background: var(--brand-primary);
+  --background-alt: var(--brand-secondary);
+  --window-titlebar: var(--blue-tint-200);
+  --window-titlebar-text: var(--brand-primary);
+  --text-primary: var(--white);
+  --text-secondary: var(--blue-tint-200);
+  --button: var(--white);
+  --button-text: var(--brand-primary);
+  --button-hover: var(--blue-tint-100);
+  --border: var(--white);
+  --focus: var(--white);
+  --error: var(--white);
+  --error-text: var(--brand-primary);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--brand-primary);
+  background: var(--white);
+}
+.scm-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Фокус ---------- */
+:focus-visible { outline: 3px solid var(--focus, #1c4587); outline-offset: 2px; }
+
+/* ---------- Піксельна іконка ---------- */
+.scm-icon { display: inline-block; vertical-align: middle; shape-rendering: crispEdges; flex: none; width: 24px; height: 24px; fill: currentColor; }
+.scm-icon-s { width: 20px; height: 20px; }
+.scm-icon-l { width: 28px; height: 28px; }
+.scm-icon-xl { width: 32px; height: 32px; }
+.scm-icon-2xl { width: 64px; height: 64px; }
+
+/* ---------- Кнопка ---------- */
+.scm-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: var(--touch-target); min-width: var(--touch-target);
+  padding: calc(var(--space-3) - var(--border-width)) calc(var(--space-5) - var(--border-width));
+  font-family: var(--font-mono); font-size: 20px; line-height: 24px; font-weight: 600;
+  border: var(--border-width) solid var(--border); border-radius: 0;
+  cursor: pointer; text-decoration: none; text-align: center;
+  transition: transform .06s linear;
+}
+.scm-btn:active { transform: translate(var(--press-shift), var(--press-shift)); }
+.scm-btn-primary { background: var(--button); color: var(--button-text); box-shadow: var(--shadow-button); }
+.scm-btn-primary:hover { background: var(--button-hover); }
+.scm-btn-primary:active { background: var(--button-hover); box-shadow: var(--shadow-button-pressed); }
+.scm-btn-inverse { background: var(--button); color: var(--button-text); border-color: var(--button); box-shadow: var(--shadow-bevel); }
+.scm-btn-inverse:hover { background: var(--button-hover); }
+.scm-btn-inverse:active { background: var(--button-hover); box-shadow: var(--shadow-pressed); }
+.scm-btn-outline { background: transparent; color: var(--text-primary); box-shadow: none; }
+.scm-btn-outline:hover { background: var(--background-alt); }
+.scm-btn-outline:active { background: var(--background-alt); box-shadow: var(--shadow-inset-pressed); }
+.scm-btn-l { min-height: var(--control-height-xl); padding: var(--space-4) var(--space-6); font-size: 24px; line-height: 28px; }
+.scm-btn-block { display: flex; width: 100%; }
+.scm-btn[disabled], .scm-btn[disabled]:hover, .scm-btn[disabled]:active {
+  background: var(--blue-tint-200); color: var(--brand-secondary);
+  border: var(--border-width) dashed var(--brand-secondary); box-shadow: none; cursor: not-allowed; transform: none;
+}
+
+/* ---------- Перемикач мови ---------- */
+.scm-lang { display: inline-flex; gap: var(--space-2); }
+.scm-lang button {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-1);
+  min-width: var(--touch-target); min-height: var(--touch-target); padding: 0 var(--space-3); margin: 0;
+  border: var(--border-width) solid var(--border);
+  font-family: var(--font-mono); font-size: 18px; font-weight: 600; letter-spacing: .02em; cursor: pointer;
+  background: transparent; color: var(--text-primary);
+}
+.scm-lang button[aria-pressed="true"] { background: var(--button); color: var(--button-text); }
+.scm-lang button[aria-pressed="false"] .scm-icon { display: none; }
+.scm-lang button[aria-pressed="false"]:hover { background: var(--background-alt); }
+.scm-lang button:active { transform: translate(var(--press-shift), var(--press-shift)); box-shadow: var(--shadow-inset-pressed); }
+
+/* ---------- «Вікно» ---------- */
+.scm-win { background: var(--white); border: var(--border-width) solid var(--border); box-shadow: var(--shadow-window); display: flex; flex-direction: column; min-width: 0; }
+.scm-on-brand .scm-win { box-shadow: none; }
+.scm-win-bar {
+  display: flex; align-items: center; gap: var(--space-2); min-height: 36px; padding: var(--space-1) var(--space-3);
+  background: var(--window-titlebar); color: var(--window-titlebar-text);
+  font-family: var(--font-mono); font-size: 16px; line-height: 24px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+}
+.scm-win-bar-title { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.scm-win-dots { display: inline-flex; gap: var(--space-1); }
+.scm-win-dots i { width: 14px; height: 14px; display: block; background: var(--window-titlebar-text); box-shadow: inset -2px -2px 0 0 #aebbe0; border-radius: 2px; }
+.scm-win-body { color: var(--text-primary); padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3); flex: 1; }
+
+/* ---------- Картка екскурсії / курсу ---------- */
+.scm-offer-title { margin: 0; font-family: var(--font-pixel); font-size: 32px; line-height: 36px; font-weight: 600; color: var(--text-primary); }
+.scm-offer-desc { margin: 0; color: var(--text-primary); }
+.scm-offer-meta { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: var(--space-2) var(--space-3); align-items: start; }
+.scm-offer-meta dt { display: flex; align-items: center; gap: var(--space-2); font-weight: 600; color: var(--text-secondary); font-size: 16px; line-height: 24px; }
+.scm-offer-meta dd { margin: 0; color: var(--text-primary); font-size: 18px; line-height: 24px; }
+.scm-offer-price { margin-top: auto; padding-top: var(--space-3); border-top: var(--border-width) dashed var(--blue-tint-300); display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
+.scm-offer-price strong { font-size: 24px; line-height: 28px; font-weight: 700; color: var(--text-primary); }
+.scm-offer-price span { font-size: 16px; color: var(--text-secondary); }
+
+/* ---------- Картка експоната ---------- */
+.scm-exhibit .scm-win-body { padding: 0; gap: 0; }
+.scm-exhibit-photo { position: relative; aspect-ratio: 4 / 3; background: var(--blue-tint-200); border-bottom: var(--border-width) solid var(--border); overflow: hidden; display: grid; place-items: center; }
+.scm-exhibit-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.scm-exhibit-photo-ph {
+  width: 100%; height: 100%; display: grid; place-items: center; color: var(--text-primary);
+  background-image: linear-gradient(var(--blue-tint-300) var(--border-width), transparent var(--border-width)), linear-gradient(90deg, var(--blue-tint-300) var(--border-width), transparent var(--border-width));
+  background-size: var(--space-4) var(--space-4); background-position: -1px -1px;
+}
+.scm-exhibit-photo .scm-tag { position: absolute; left: var(--space-2); top: var(--space-2); }
+.scm-exhibit-text { padding: var(--space-4) var(--space-5) var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+.scm-exhibit-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; }
+.scm-exhibit-year { font-family: var(--font-mono); font-size: 16px; font-weight: 600; color: var(--button-text); background: var(--button); padding: 0 var(--space-2); }
+.scm-exhibit-caption { margin: 0; font-size: 16px; line-height: 24px; color: var(--text-secondary); }
+
+/* ---------- Позначка «Заглушка» ---------- */
+.scm-tag {
+  display: inline-flex; align-items: center; padding: 2px var(--space-2);
+  font-family: var(--font-mono); font-size: 16px; line-height: 24px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  background: var(--white); color: var(--text-primary); border: var(--border-width) dashed var(--border); border-radius: 2px;
+}
+
+/* ---------- Заголовок секції ---------- */
+.scm-sechead { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-6); }
+.scm-sechead-prompt { font-family: var(--font-mono); font-size: 16px; line-height: 24px; font-weight: 500; color: var(--text-secondary); }
+.scm-sechead h2 { margin: 0; font-family: var(--font-pixel); font-size: 52px; line-height: 56px; font-weight: 600; letter-spacing: .02em; color: var(--text-primary); }
+.scm-sechead p { margin: 0; max-width: 680px; color: var(--text-primary); }
+.scm-cursor { display: inline-block; width: .6em; height: 1.05em; margin-left: 2px; vertical-align: -0.15em; background: currentColor; animation: scm-blink 1.06s steps(1) 4; }
+@keyframes scm-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .scm-cursor { animation: none; } .scm-btn { transition: none; } }
+
+/* ---------- Поля форми ---------- */
+.scm-field { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+.scm-field label { font-weight: 600; font-size: 18px; line-height: 24px; color: var(--text-primary); }
+.scm-field-hint { display: flex; align-items: center; gap: var(--space-2); font-family: var(--font-mono); font-size: 16px; line-height: 24px; color: var(--text-secondary); }
+.scm-input {
+  width: 100%; min-height: var(--control-height-l); padding: var(--space-3) var(--space-4); border-radius: 0;
+  font-family: var(--font-text); font-size: 18px; line-height: 24px; color: var(--brand-primary);
+  background: var(--blue-tint-50); border: var(--border-width) solid var(--border);
+  box-shadow: var(--shadow-field);
+}
+.scm-input::placeholder { color: var(--brand-secondary); opacity: 1; }
+.scm-input:hover:not(:disabled) { background-color: var(--white); box-shadow: var(--shadow-field-hover); }
+.scm-input:focus-visible { background-color: var(--white); box-shadow: none; }
+.scm-input:disabled, .scm-input[readonly] { background-color: var(--blue-tint-200); color: var(--brand-secondary); border-style: dashed; border-color: var(--brand-secondary); box-shadow: none; cursor: not-allowed; }
+/* Рамка 3px не змінює розмір поля: відступ зменшується на 1px. */
+.scm-input.scm-prefilled, .scm-field-invalid .scm-input { border-width: var(--border-width-thick); padding: calc(var(--space-3) - 1px) calc(var(--space-4) - 1px); }
+.scm-input.scm-prefilled { background-color: var(--white); }
+.scm-field-invalid .scm-input { border-style: dashed; }
+.scm-select, .scm-input.scm-select { padding-right: var(--space-7); }
+.scm-select {
+  appearance: none; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(-45deg, transparent 50%, currentColor 50%);
+  background-size: var(--space-2) var(--space-2), var(--space-2) var(--space-2);
+  background-position: calc(100% - var(--space-5) - var(--border-width)) 50%, calc(100% - var(--space-4) - var(--border-width)) 50%; background-repeat: no-repeat;
+}
+.scm-select.scm-prefilled, .scm-field-invalid .scm-select { padding-right: calc(var(--space-7) - 1px); }
+.scm-field-error { display: flex; align-items: flex-start; gap: var(--space-2); margin: 0; font-weight: 600; font-size: 16px; line-height: 24px; color: var(--error-text); background: var(--error); padding: var(--space-2) var(--space-3); }
+
+/* ---------- Форма запису ---------- */
+.scm-form { display: flex; flex-direction: column; gap: var(--space-5); }
+.scm-form-note { margin: 0; font-size: 16px; line-height: 24px; color: var(--text-secondary); }
+.scm-success { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-4); padding: var(--space-5); border: var(--border-width) solid var(--brand-secondary); }
+.scm-success p { margin: 0; font-size: 20px; line-height: 30px; color: var(--text-primary); }
+.scm-success .scm-success-title { font-family: var(--font-pixel); font-size: 40px; line-height: 44px; font-weight: 600; display: flex; align-items: center; gap: var(--space-3); }
+
+/* ---------- Шапка ---------- */
+.scm-header { background: var(--background); color: var(--text-primary); border-bottom: var(--border-width-heavy) solid var(--blue-tint-200); }
+.scm-header-in { max-width: var(--container-max); margin: 0 auto; padding: var(--space-3) var(--space-6); display: flex; align-items: center; gap: var(--space-5); }
+.scm-logo { display: inline-flex; align-items: center; color: inherit; text-decoration: none; font-family: var(--font-pixel); font-weight: 600; font-size: 28px; line-height: 30px; letter-spacing: .04em; min-height: var(--touch-target); }
+.scm-nav { display: flex; gap: var(--space-1); margin-left: auto; }
+.scm-nav a { display: inline-flex; align-items: center; min-height: var(--touch-target); padding: 0 var(--space-3); color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 18px; border-bottom: var(--border-width-thick) solid transparent; }
+.scm-nav a:hover { border-bottom-color: var(--text-primary); }
+.scm-nav a:active, .scm-mobile-nav > a:active { background: var(--background-alt); border-bottom-color: var(--text-primary); }
+.scm-header-actions { display: flex; align-items: center; gap: var(--space-3); }
+.scm-menu-btn { display: none; padding-left: calc(var(--space-3) - var(--border-width)); padding-right: calc(var(--space-3) - var(--border-width)); }
+.scm-mobile-nav { display: none; }
+.scm-mobile-nav > a { display: flex; align-items: center; min-height: var(--control-height-l); padding: 0 var(--space-3); color: var(--text-primary); text-decoration: none; font-size: 20px; line-height: 24px; font-weight: 600; }
+.scm-mobile-nav > a:hover { background: var(--background-alt); }
+.scm-mobile-nav-foot { display: flex; gap: var(--space-3); align-items: center; justify-content: space-between; padding-top: var(--space-3); flex-wrap: wrap; }
+
+/* ---------- Перший екран ---------- */
+.scm-hero { background: var(--background); color: var(--text-primary); position: relative; overflow: hidden; }
+.scm-hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .18;
+  background-image: radial-gradient(var(--blue-tint-300) 2px, transparent 2.5px); background-size: var(--space-5) var(--space-5);
+}
+.scm-hero-in { position: relative; max-width: var(--container-max); margin: 0 auto; padding: var(--space-9) var(--space-6); display: flex; flex-direction: column; gap: var(--space-5); }
+.scm-hero-prompt { font-family: var(--font-mono); font-size: 16px; line-height: 24px; color: var(--text-secondary); }
+.scm-hero h1 { margin: 0; font-family: var(--font-pixel); font-size: 84px; line-height: 88px; font-weight: 600; letter-spacing: .02em; max-width: 900px; overflow-wrap: anywhere; }
+.scm-hero-slogan { margin: 0; font-size: 22px; line-height: 32px; color: var(--text-secondary); max-width: 640px; }
+.scm-hero-go { margin: var(--space-3) 0 0; font-size: 18px; line-height: 24px; font-weight: 600; color: var(--text-primary); }
+.scm-hero-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); max-width: 840px; margin-top: var(--space-3); }
+
+/* ---------- Контакти ---------- */
+.scm-contacts { display: grid; grid-template-columns: 1fr; gap: var(--space-5); }
+.scm-contacts-list { margin: 0; display: flex; flex-direction: column; gap: var(--space-4); }
+.scm-contacts-list > div { display: grid; grid-template-columns: 28px 1fr; gap: var(--space-1) var(--space-3); }
+.scm-contacts-list dt { grid-column: 2; font-weight: 600; font-size: 16px; color: var(--text-secondary); }
+.scm-contacts-list dd { grid-column: 2; margin: 0; color: var(--text-primary); }
+.scm-contacts-ico { grid-row: span 2; color: var(--text-primary); padding-top: 2px; }
+.scm-map {
+  position: relative; min-height: 260px; border: var(--border-width) solid var(--border); background-color: var(--blue-tint-100);
+  background-image: linear-gradient(var(--blue-tint-200) var(--border-width), transparent var(--border-width)), linear-gradient(90deg, var(--blue-tint-200) var(--border-width), transparent var(--border-width));
+  background-size: var(--space-6) var(--space-6); display: grid; place-items: center;
+}
+.scm-map-pin { color: var(--text-primary); }
+.scm-map-route { position: absolute; left: var(--space-3); bottom: var(--space-3); }
+.scm-map .scm-tag { position: absolute; right: var(--space-2); top: var(--space-2); }
+
+/* ---------- Текстове посилання (телефон) ---------- */
+.scm-link { display: inline-flex; align-items: center; min-height: var(--touch-target); min-width: var(--touch-target); color: var(--text-primary); font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.scm-link:hover { text-decoration-thickness: 4px; }
+.scm-link:active { background: var(--background-alt); text-decoration-thickness: 4px; }
+
+/* ---------- Підвал ---------- */
+.scm-footer { background: var(--background-alt); color: var(--text-primary); border-top: var(--border-width-heavy) solid var(--blue-tint-200); }
+.scm-footer-in { max-width: var(--container-max); margin: 0 auto; padding: var(--space-6); display: grid; grid-template-columns: 1.2fr 1.5fr auto; gap: var(--space-5); align-items: start; }
+.scm-footer-contacts { display: flex; flex-direction: column; gap: var(--space-1); font-size: 16px; line-height: 24px; }
+.scm-footer-copy { grid-column: 1 / -1; padding-top: var(--space-4); border-top: var(--border-width) solid var(--blue-tint-300); font-family: var(--font-mono); font-size: 16px; color: var(--text-secondary); }
+
+/* ---------- Секції й сітки ---------- */
+.scm-section { background: var(--background); color: var(--text-primary); padding: var(--space-8) 0; }
+.scm-section.scm-section-alt { background: var(--background-alt); }
+.scm-container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-6); display: flex; flex-direction: column; gap: var(--space-6); }
+.scm-grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
+.scm-more { display: flex; justify-content: center; }
+.scm-more:has(> [hidden]:only-child) { display: none; } /* без зайвого відступу, коли кнопку сховано */
+/* «Показати більше»: лише два кольори в усіх станах.
+   Світлий фон — синя #233a7e з білим текстом; синій фон (.scm-on-brand) — біла із синім текстом.
+   Наведення й натискання показуємо підкресленням і зсувом, а не іншим відтінком. */
+.scm-btn-more,
+.scm-btn-more:hover,
+.scm-btn-more:active { background: var(--brand-primary); color: var(--white); border-color: var(--brand-primary); }
+.scm-btn-more { box-shadow: var(--shadow-button); }
+.scm-btn-more:hover span { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.scm-btn-more:active { box-shadow: var(--shadow-button-pressed); }
+.scm-btn-more:focus-visible { outline-color: var(--brand-primary); }
+.scm-on-brand .scm-btn-more,
+.scm-on-brand .scm-btn-more:hover,
+.scm-on-brand .scm-btn-more:active { background: var(--white); color: var(--brand-primary); border-color: var(--white); box-shadow: none; }
+.scm-on-brand .scm-btn-more:focus-visible { outline-color: var(--white); }
+.scm-booking-row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--space-5); align-items: start; }
+
+/* ---------- Активний пункт меню ---------- */
+.scm-nav a[aria-current="page"] { border-bottom-color: var(--text-primary); }
+.scm-mobile-nav > a[aria-current="page"] { background: var(--background-alt); }
+
+/* ---------- Сторінки «Статті» і статей ---------- */
+.scm-page-hero .scm-hero-in { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+.scm-page-hero h1 { font-size: 64px; line-height: 68px; }
+.scm-crumb {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: var(--space-2); min-height: var(--touch-target);
+  color: var(--text-primary); font-family: var(--font-mono); font-size: 16px; line-height: 24px; font-weight: 600;
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px;
+}
+.scm-crumb:hover { text-decoration-thickness: 4px; }
+.scm-crumb .scm-icon { transform: scaleX(-1); }
+.scm-article-meta { margin: 0; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); font-family: var(--font-mono); font-size: 16px; line-height: 24px; font-weight: 500; color: var(--text-secondary); }
+
+.scm-article { max-width: 808px; } /* 760px тексту + бічні відступи контейнера */
+.scm-prose { display: flex; flex-direction: column; gap: var(--space-4); }
+.scm-prose h2 { margin: 0; font-family: var(--font-pixel); font-size: 40px; line-height: 44px; font-weight: 600; letter-spacing: .02em; color: var(--text-primary); }
+.scm-prose p, .scm-prose ul, .scm-prose ol { margin: 0; }
+.scm-prose ul, .scm-prose ol { padding-left: var(--space-5); display: flex; flex-direction: column; gap: var(--space-2); }
+.scm-prose li::marker { color: var(--brand-secondary); font-weight: 600; }
+.scm-prose a { color: var(--text-primary); font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.scm-prose a:hover { text-decoration-thickness: 4px; }
+.scm-article-lead p { font-size: 22px; line-height: 34px; }
+.scm-article-callout h2 { font-size: 32px; line-height: 36px; }
+.scm-sources { font-size: 16px; line-height: 24px; }
+
+.scm-article-pager { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); }
+.scm-pager-link {
+  display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-4) var(--space-5);
+  background: var(--white); color: var(--text-primary); text-decoration: none;
+  border: var(--border-width) solid var(--border); box-shadow: var(--shadow-button);
+}
+.scm-pager-link:hover .scm-pager-title { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.scm-pager-link:active { transform: translate(var(--press-shift), var(--press-shift)); box-shadow: var(--shadow-button-pressed); }
+.scm-pager-label { font-family: var(--font-mono); font-size: 16px; line-height: 24px; font-weight: 600; color: var(--text-secondary); }
+.scm-pager-prev .scm-pager-label::before { content: "← "; }
+.scm-pager-next .scm-pager-label::after { content: " →"; }
+.scm-pager-title { font-weight: 600; }
+.scm-pager-next { grid-column: 2; text-align: right; }
+
+.scm-article-card .scm-btn { margin-top: auto; }
+.scm-article-card .scm-offer-meta { padding-bottom: var(--space-2); }
+
+/* ---------- Шапка: меню згортається до 1199px ----------
+   Після появи п'ятого пункту «Статті» повне меню з логотипом, мовами й кнопкою
+   вміщується лише від 1200px; вужче логотип стискався в 4 рядки. */
+@media (max-width: 1199px) {
+  .scm-nav, .scm-header-actions { display: none; }
+  .scm-menu-btn { display: inline-flex; margin-left: auto; }
+  .scm-mobile-nav[data-open="true"] { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-2) var(--space-4) var(--space-5); border-top: var(--border-width) solid var(--blue-tint-200); }
+}
+
+/* ---------- Планшет і телефон (до 1023px) ---------- */
+@media (max-width: 1023px) {
+  .scm-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .scm-booking-row { grid-template-columns: minmax(0, 1fr); }
+  .scm-header-in { padding: var(--space-2) var(--space-4); gap: var(--space-3); }
+  .scm-hero-in { padding: var(--space-7) var(--space-4); }
+  .scm-hero-actions { grid-template-columns: 1fr; }
+  .scm-footer-in { grid-template-columns: 1fr; padding: var(--space-6) var(--space-4); }
+}
+
+/* ---------- Телефон (до 599px) ---------- */
+@media (max-width: 599px) {
+  .scm-section { padding: var(--space-7) 0; }
+  .scm-container { padding: 0 var(--space-4); gap: var(--space-5); }
+  .scm-grid-3 { grid-template-columns: 1fr; gap: var(--space-4); }
+  .scm-win { box-shadow: var(--shadow-window-m); }
+  .scm-win-body { padding: var(--space-4); }
+  .scm-sechead h2 { font-size: 40px; line-height: 44px; }
+  .scm-btn { font-size: 18px; }
+  .scm-btn-l { font-size: 20px; line-height: 28px; }
+  .scm-offer-title { font-size: 28px; line-height: 32px; }
+  .scm-offer-price strong { font-size: 22px; }
+  .scm-hero-in { gap: var(--space-4); }
+  .scm-hero h1 { font-size: 52px; line-height: 56px; }
+  .scm-hero-slogan { font-size: 20px; line-height: 30px; }
+  .scm-hero::before { display: none; }
+  .scm-page-hero .scm-hero-in { padding-top: var(--space-7); padding-bottom: var(--space-7); }
+  .scm-page-hero h1 { font-size: 40px; line-height: 44px; }
+  .scm-prose h2 { font-size: 32px; line-height: 36px; }
+  .scm-article-callout h2 { font-size: 28px; line-height: 32px; }
+  .scm-article-lead p { font-size: 20px; line-height: 30px; }
+  .scm-article-pager { grid-template-columns: 1fr; gap: var(--space-4); }
+  .scm-pager-next { grid-column: 1; text-align: left; }
+}

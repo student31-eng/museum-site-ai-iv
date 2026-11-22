@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Software and Computer Museum — головна</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&family=IBM+Plex+Mono:wght@400;500;600&family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="scm">
+
+  <header class="scm-header scm-on-brand">
+    <div class="scm-header-in">
+      <a class="scm-logo" href="#top">Software and<br>Computer Museum</a>
+      <nav class="scm-nav" aria-label="Основна навігація" data-i18n-aria="navLabel">
+        <a href="#tours" data-i18n="tours">Екскурсії</a>
+        <a href="#exhibits" data-i18n="exhibits">Експонати</a>
+        <a href="#courses" data-i18n="courses">Курси</a>
+        <a href="articles.html" data-i18n="articles">Статті</a>
+        <a href="#contacts" data-i18n="contacts">Контакти</a>
+      </nav>
+      <div class="scm-header-actions">
+        <div class="scm-lang" role="group" aria-label="Мова сайту" data-i18n-aria="language">
+          <button type="button" data-lang="ua" lang="uk" aria-pressed="true" aria-label="Українська"><svg class="scm-icon scm-icon-s" data-icon="check" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg>UA</button>
+          <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English"><svg class="scm-icon scm-icon-s" data-icon="check" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg>EN</button>
+        </div>
+        <a class="scm-btn scm-btn-inverse" href="#booking"><span data-i18n="book">Записатися</span></a>
+      </div>
+      <button type="button" class="scm-btn scm-btn-outline scm-menu-btn" aria-expanded="false" aria-controls="scm-mobile-nav">
+        <svg class="scm-icon" data-icon="menu" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg>
+        <span data-i18n="menu">Меню</span>
+      </button>
+    </div>
+    <nav id="scm-mobile-nav" class="scm-mobile-nav" data-open="false" aria-label="Основна навігація" data-i18n-aria="navLabel">
+      <a href="#tours" data-i18n="tours">Екскурсії</a>
+      <a href="#exhibits" data-i18n="exhibits">Експонати</a>
+      <a href="#courses" data-i18n="courses">Курси</a>
+      <a href="articles.html" data-i18n="articles">Статті</a>
+      <a href="#contacts" data-i18n="contacts">Контакти</a>
+      <div class="scm-mobile-nav-foot">
+        <div class="scm-lang" role="group" aria-label="Мова сайту" data-i18n-aria="language">
+          <button type="button" data-lang="ua" lang="uk" aria-pressed="true" aria-label="Українська"><svg class="scm-icon scm-icon-s" data-icon="check" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg>UA</button>
+          <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English"><svg class="scm-icon scm-icon-s" data-icon="check" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg>EN</button>
+        </div>
+        <a class="scm-btn scm-btn-inverse" href="#booking"><span data-i18n="book">Записатися</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Перший екран -->
+    <section class="scm-hero scm-on-brand" id="top">
+      <div class="scm-hero-in">
+        <span class="scm-hero-prompt" aria-hidden="true">C:\MUSEUM&gt; run welcome.exe<span class="scm-cursor"></span></span>
+        <h1>Software and Computer Museum</h1>
+        <p class="scm-hero-slogan" data-i18n="slogan">Доторкніться до комп’ютерів, з яких почався цифровий світ, — і навчіться впевнено працювати із сучасними.</p>
+        <p class="scm-hero-go" data-i18n="heroGo">З чого почнемо?</p>
+        <div class="scm-hero-actions">
+          <a class="scm-btn scm-btn-inverse scm-btn-l" href="#tours"><svg class="scm-icon scm-icon-l" data-icon="people" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="tours">Екскурсії</span></a>
+          <a class="scm-btn scm-btn-inverse scm-btn-l" href="#exhibits"><svg class="scm-icon scm-icon-l" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="exhibits">Експонати</span></a>
+          <a class="scm-btn scm-btn-inverse scm-btn-l" href="#courses"><svg class="scm-icon scm-icon-l" data-icon="calendar" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="courses">Курси</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Екскурсії -->
+    <section id="tours" class="scm-section" aria-labelledby="tours-title">
+      <div class="scm-container">
+        <header class="scm-sechead">
+          <span class="scm-sechead-prompt" aria-hidden="true">C:\MUSEUM&gt; dir /tours</span>
+          <h2 id="tours-title" data-i18n="tours">Екскурсії</h2>
+          <p data-i18n="toursIntro">Проведемо Вас залами музею й розповімо, як змінювалися комп’ютери. Підійде і для родини, і для шкільного класу.</p>
+        </header>
+        <div class="scm-grid-3">
+
+          <article class="scm-win" aria-labelledby="tour-1">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title" data-i18n="tour">Екскурсія</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div><span class="scm-tag" data-i18n="placeholder">Заглушка</span></div>
+              <h3 class="scm-offer-title" id="tour-1">Від перфокарти до смартфона</h3>
+              <p class="scm-offer-desc">Головна екскурсія музею: як обчислювальна машина розміром з кімнату вмістилася у Вашу кишеню.</p>
+              <dl class="scm-offer-meta">
+                <dt><svg class="scm-icon scm-icon-s" data-icon="clock" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="duration">Тривалість</span></dt><dd>60 хвилин</dd>
+                <dt><svg class="scm-icon scm-icon-s" data-icon="people" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="audience">Для кого</span></dt><dd>Для всіх від 10 років</dd>
+              </dl>
+              <div class="scm-offer-price"><span><span data-i18n="price">Ціна</span> <strong>250&nbsp;грн</strong><span> · дітям до 7 років — безкоштовно</span></span></div>
+              <a class="scm-btn scm-btn-primary scm-btn-block" href="#booking" data-book="Від перфокарти до смартфона"><span><span data-i18n="book">Записатися</span><span class="scm-sr">: Від перфокарти до смартфона</span></span><svg class="scm-icon" data-icon="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></a>
+            </div>
+          </article>
+
+          <article class="scm-win" aria-labelledby="tour-2">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title" data-i18n="tour">Екскурсія</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div><span class="scm-tag" data-i18n="placeholder">Заглушка</span></div>
+              <h3 class="scm-offer-title" id="tour-2">Ігри нашого дитинства</h3>
+              <p class="scm-offer-desc">Пограємо на справжніх приставках і комп’ютерах 80–90-х і порівняємо з сучасними іграми.</p>
+              <dl class="scm-offer-meta">
+                <dt><svg class="scm-icon scm-icon-s" data-icon="clock" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="duration">Тривалість</span></dt><dd>45 хвилин</dd>
+                <dt><svg class="scm-icon scm-icon-s" data-icon="people" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="audience">Для кого</span></dt><dd>Школярам 7–14 років і батькам</dd>
+              </dl>
+              <div class="scm-offer-price"><span><span data-i18n="price">Ціна</span> <strong>200&nbsp;грн</strong></span></div>
+              <a class="scm-btn scm-btn-primary scm-btn-block" href="#booking" data-book="Ігри нашого дитинства"><span><span data-i18n="book">Записатися</span><span class="scm-sr">: Ігри нашого дитинства</span></span><svg class="scm-icon" data-icon="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></a>
+            </div>
+          </article>
+
+          <article class="scm-win" aria-labelledby="tour-3">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title" data-i18n="tour">Екскурсія</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div><span class="scm-tag" data-i18n="placeholder">Заглушка</span></div>
+              <h3 class="scm-offer-title" id="tour-3">Групова шкільна екскурсія</h3>
+              <p class="scm-offer-desc">Програму підлаштуємо під вік і шкільний предмет. Час погоджуємо з учителем заздалегідь.</p>
+              <dl class="scm-offer-meta">
+                <dt><svg class="scm-icon scm-icon-s" data-icon="clock" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="duration">Тривалість</span></dt><dd>90 хвилин</dd>
+                <dt><svg class="scm-icon scm-icon-s" data-icon="people" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="audience">Для кого</span></dt><dd>Класам до 30 учнів з учителем</dd>
+              </dl>
+              <div class="scm-offer-price"><span><span data-i18n="price">Ціна</span> <strong>150&nbsp;грн</strong><span> · з учня, учителю — безкоштовно</span></span></div>
+              <a class="scm-btn scm-btn-primary scm-btn-block" href="#booking" data-book="Групова шкільна екскурсія"><span><span data-i18n="book">Записатися</span><span class="scm-sr">: Групова шкільна екскурсія</span></span><svg class="scm-icon" data-icon="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Експонати -->
+    <section id="exhibits" class="scm-section scm-section-alt" aria-labelledby="exhibits-title">
+      <div class="scm-container">
+        <header class="scm-sechead">
+          <span class="scm-sechead-prompt" aria-hidden="true">C:\MUSEUM&gt; dir /exhibits</span>
+          <h2 id="exhibits-title" data-i18n="exhibits">Експонати</h2>
+          <p data-i18n="exhibitsCount">6 експонатів 80–90-х — від дискети 5,25″ до модема</p>
+          <p data-i18n="exhibitsIntro">Техніка 80–90-х, яку можна роздивитися зблизька. Деякі експонати ще працюють — запитайте екскурсовода.</p>
+        </header>
+        <div class="scm-grid-3" id="exhibits-grid" data-show-first="3">
+
+          <article class="scm-win scm-exhibit">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title">PC_1984.BMP</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div class="scm-exhibit-photo">
+                <div class="scm-exhibit-photo-ph" role="img" aria-label="Заглушка фото: Персональний комп’ютер"><svg class="scm-icon scm-icon-2xl" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></div>
+                <span class="scm-tag" data-i18n="placeholder">Заглушка</span>
+              </div>
+              <div class="scm-exhibit-text">
+                <div class="scm-exhibit-head"><h3 class="scm-offer-title">Персональний комп’ютер</h3><span class="scm-exhibit-year">1984</span></div>
+                <p class="scm-exhibit-caption">Один із перших домашніх комп’ютерів: монітор, клавіатура й дисковод в одному корпусі.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="scm-win scm-exhibit">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title">DISK_525.BMP</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div class="scm-exhibit-photo">
+                <div class="scm-exhibit-photo-ph" role="img" aria-label="Заглушка фото: Дискета 5,25″"><svg class="scm-icon scm-icon-2xl" data-icon="floppy" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></div>
+                <span class="scm-tag" data-i18n="placeholder">Заглушка</span>
+              </div>
+              <div class="scm-exhibit-text">
+                <div class="scm-exhibit-head"><h3 class="scm-offer-title">Дискета 5,25″</h3><span class="scm-exhibit-year">1986</span></div>
+                <p class="scm-exhibit-caption">Гнучкий диск на 360 КБ — на ньому вміщалася ціла гра.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="scm-win scm-exhibit">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title">GUI_1985.BMP</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div class="scm-exhibit-photo">
+                <div class="scm-exhibit-photo-ph" role="img" aria-label="Заглушка фото: Перша графічна ОС"><svg class="scm-icon scm-icon-2xl" data-icon="prompt" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></div>
+                <span class="scm-tag" data-i18n="placeholder">Заглушка</span>
+              </div>
+              <div class="scm-exhibit-text">
+                <div class="scm-exhibit-head"><h3 class="scm-offer-title">Перша графічна ОС</h3><span class="scm-exhibit-year">1985</span></div>
+                <p class="scm-exhibit-caption">Замість команд — віконця й мишка. Так комп’ютером змогли користуватися всі.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="scm-win scm-exhibit">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title">CONSOLE.BMP</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div class="scm-exhibit-photo">
+                <div class="scm-exhibit-photo-ph" role="img" aria-label="Заглушка фото: Ігрова приставка"><svg class="scm-icon scm-icon-2xl" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></div>
+                <span class="scm-tag" data-i18n="placeholder">Заглушка</span>
+              </div>
+              <div class="scm-exhibit-text">
+                <div class="scm-exhibit-head"><h3 class="scm-offer-title">Ігрова приставка</h3><span class="scm-exhibit-year">1993</span></div>
+                <p class="scm-exhibit-caption">Під’єднувалася до звичайного телевізора й збирала біля екрана всю родину.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="scm-win scm-exhibit">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title">PRINTER.BMP</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div class="scm-exhibit-photo">
+                <div class="scm-exhibit-photo-ph" role="img" aria-label="Заглушка фото: Матричний принтер"><svg class="scm-icon scm-icon-2xl" data-icon="tag" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></div>
+                <span class="scm-tag" data-i18n="placeholder">Заглушка</span>
+              </div>
+              <div class="scm-exhibit-text">
+                <div class="scm-exhibit-head"><h3 class="scm-offer-title">Матричний принтер</h3><span class="scm-exhibit-year">1988</span></div>
+                <p class="scm-exhibit-caption">Друкував голками крізь фарбувальну стрічку — і було чути на всю квартиру.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="scm-win scm-exhibit">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="computer" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title">MODEM.BMP</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div class="scm-exhibit-photo">
+                <div class="scm-exhibit-photo-ph" role="img" aria-label="Заглушка фото: Модем"><svg class="scm-icon scm-icon-2xl" data-icon="phone" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></div>
+                <span class="scm-tag" data-i18n="placeholder">Заглушка</span>
+              </div>
+              <div class="scm-exhibit-text">
+                <div class="scm-exhibit-head"><h3 class="scm-offer-title">Модем</h3><span class="scm-exhibit-year">1995</span></div>
+                <p class="scm-exhibit-caption">Вихід в інтернет через телефонну лінію. Поки Ви в мережі, додому не додзвонитися.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <!-- Кнопку показує main.js, коли ховає зайві картки; без JS видно всі експонати. -->
+        <div class="scm-more">
+          <button type="button" class="scm-btn scm-btn-more" id="exhibits-more" aria-controls="exhibits-grid" aria-expanded="false" hidden><span data-i18n="showMore">Показати більше</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Курси -->
+    <section id="courses" class="scm-section scm-section-alt scm-on-brand" aria-labelledby="courses-title">
+      <div class="scm-container">
+        <header class="scm-sechead">
+          <span class="scm-sechead-prompt" aria-hidden="true">C:\MUSEUM&gt; dir /courses</span>
+          <h2 id="courses-title" data-i18n="courses">Курси</h2>
+          <p data-i18n="coursesIntro">Невеликі групи, спокійний темп і жодного жаргону. Пояснюємо так, щоб усе вийшло з першого разу.</p>
+        </header>
+        <div class="scm-grid-3">
+
+          <article class="scm-win" aria-labelledby="course-1">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="floppy" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title" data-i18n="course">Курс</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div><span class="scm-tag" data-i18n="placeholder">Заглушка</span></div>
+              <h3 class="scm-offer-title" id="course-1">Комп’ютер без страху</h3>
+              <p class="scm-offer-desc">Пошта, відеодзвінки, онлайн-банкінг і безпека в інтернеті — крок за кроком.</p>
+              <dl class="scm-offer-meta">
+                <dt><svg class="scm-icon scm-icon-s" data-icon="calendar" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="sessions">Занять</span></dt><dd>8 занять по 90 хв</dd>
+                <dt><svg class="scm-icon scm-icon-s" data-icon="people" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="audience">Для кого</span></dt><dd>Дорослим, які лише починають</dd>
+              </dl>
+              <div class="scm-offer-price"><span><span data-i18n="price">Ціна</span> <strong>1600&nbsp;грн</strong></span></div>
+              <a class="scm-btn scm-btn-primary scm-btn-block" href="#booking" data-book="Комп’ютер без страху"><span><span data-i18n="book">Записатися</span><span class="scm-sr">: Комп’ютер без страху</span></span><svg class="scm-icon" data-icon="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></a>
+            </div>
+          </article>
+
+          <article class="scm-win" aria-labelledby="course-2">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="floppy" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title" data-i18n="course">Курс</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div><span class="scm-tag" data-i18n="placeholder">Заглушка</span></div>
+              <h3 class="scm-offer-title" id="course-2">Перша програма</h3>
+              <p class="scm-offer-desc">Від простих команд до власної маленької гри, яку можна показати друзям.</p>
+              <dl class="scm-offer-meta">
+                <dt><svg class="scm-icon scm-icon-s" data-icon="calendar" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="sessions">Занять</span></dt><dd>10 занять по 60 хв</dd>
+                <dt><svg class="scm-icon scm-icon-s" data-icon="people" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="audience">Для кого</span></dt><dd>Школярам 10–15 років</dd>
+              </dl>
+              <div class="scm-offer-price"><span><span data-i18n="price">Ціна</span> <strong>2000&nbsp;грн</strong></span></div>
+              <a class="scm-btn scm-btn-primary scm-btn-block" href="#booking" data-book="Перша програма"><span><span data-i18n="book">Записатися</span><span class="scm-sr">: Перша програма</span></span><svg class="scm-icon" data-icon="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></a>
+            </div>
+          </article>
+
+          <article class="scm-win" aria-labelledby="course-3">
+            <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="floppy" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title" data-i18n="course">Курс</span><span class="scm-win-dots"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <div><span class="scm-tag" data-i18n="placeholder">Заглушка</span></div>
+              <h3 class="scm-offer-title" id="course-3">Цифрова фотографія</h3>
+              <p class="scm-offer-desc">Як знімати на телефон, впорядкувати фото й зберегти сімейний архів.</p>
+              <dl class="scm-offer-meta">
+                <dt><svg class="scm-icon scm-icon-s" data-icon="calendar" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="sessions">Занять</span></dt><dd>6 занять по 90 хв</dd>
+                <dt><svg class="scm-icon scm-icon-s" data-icon="people" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="audience">Для кого</span></dt><dd>Підліткам і дорослим</dd>
+              </dl>
+              <div class="scm-offer-price"><span><span data-i18n="price">Ціна</span> <strong>1400&nbsp;грн</strong></span></div>
+              <a class="scm-btn scm-btn-primary scm-btn-block" href="#booking" data-book="Цифрова фотографія"><span><span data-i18n="book">Записатися</span><span class="scm-sr">: Цифрова фотографія</span></span><svg class="scm-icon" data-icon="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Запис і контакти -->
+    <section id="booking" class="scm-section" aria-labelledby="booking-title">
+      <div class="scm-container">
+        <header class="scm-sechead">
+          <span class="scm-sechead-prompt" aria-hidden="true">C:\MUSEUM&gt; run zapys.exe</span>
+          <h2 id="booking-title" data-i18n="bookingTitle">Запис і контакти</h2>
+          <p data-i18n="bookingIntro">Залиште ім’я й телефон — ми зателефонуємо, підберемо зручний день і відповімо на запитання.</p>
+        </header>
+        <div class="scm-booking-row">
+
+          <section class="scm-win" aria-labelledby="booking-win-title">
+            <div class="scm-win-bar"><svg class="scm-icon scm-icon-s" data-icon="prompt" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title" id="booking-win-title" data-i18n="winBooking">ЗАПИС.EXE</span><span class="scm-win-dots" aria-hidden="true"><i></i><i></i></span></div>
+            <div class="scm-win-body">
+              <form class="scm-form" id="booking-form" novalidate>
+                <p class="scm-form-note" data-i18n="formNote">Заповнення займе менше хвилини. Ми передзвонимо, щоб узгодити дату й час.</p>
+
+                <div class="scm-field">
+                  <label for="f-direction" data-i18n="direction">Напрям</label>
+                  <span class="scm-field-hint" id="f-direction-hint" hidden><svg class="scm-icon scm-icon-s" data-icon="check" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="prefilled">Підставлено з картки — можна змінити.</span></span>
+                  <select class="scm-input scm-select" id="f-direction" name="direction" required>
+                    <option value="" data-i18n="directionPick">Оберіть екскурсію або курс</option>
+                    <optgroup label="Екскурсії" data-i18n-label="tours">
+                      <option>Від перфокарти до смартфона</option>
+                      <option>Ігри нашого дитинства</option>
+                      <option>Групова шкільна екскурсія</option>
+                    </optgroup>
+                    <optgroup label="Курси" data-i18n-label="courses">
+                      <option>Комп’ютер без страху</option>
+                      <option>Перша програма</option>
+                      <option>Цифрова фотографія</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <div class="scm-field">
+                  <label for="f-name" data-i18n="name">Ваше ім'я</label>
+                  <input class="scm-input" id="f-name" name="name" type="text" autocomplete="name" placeholder="Наприклад, Олена" data-i18n-placeholder="namePh" required>
+                </div>
+
+                <div class="scm-field">
+                  <label for="f-phone" data-i18n="phone">Телефон</label>
+                  <span class="scm-field-hint" id="f-phone-hint" data-i18n="phoneHint">Формат: +380 XX XXX XX XX</span>
+                  <input class="scm-input" id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" value="+380 " aria-describedby="f-phone-hint" required>
+                </div>
+
+                <p class="scm-field-error" id="booking-send-error" role="alert" hidden><svg class="scm-icon scm-icon-s" data-icon="alert" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="sendError">Не вдалося надіслати заявку. Спробуйте ще раз або зателефонуйте нам.</span></p>
+
+                <button type="submit" class="scm-btn scm-btn-primary scm-btn-l scm-btn-block" id="booking-submit"><span>Надіслати</span><svg class="scm-icon scm-icon-l" data-icon="arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></button>
+              </form>
+
+              <div class="scm-success" id="booking-success" role="status" aria-live="polite" hidden>
+                <p class="scm-success-title"><svg class="scm-icon scm-icon-xl" data-icon="check" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="successTitle">Дякуємо!</span></p>
+                <p data-i18n="success">Ми зателефонуємо Вам найближчим часом.</p>
+                <button type="button" class="scm-btn scm-btn-outline" id="booking-again"><span data-i18n="again">Надіслати ще одну заявку</span></button>
+              </div>
+            </div>
+          </section>
+
+          <div id="contacts" class="scm-contacts">
+            <article class="scm-win">
+              <div class="scm-win-bar" aria-hidden="true"><svg class="scm-icon scm-icon-s" data-icon="pin" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span class="scm-win-bar-title" data-i18n="winContacts">КОНТАКТИ.TXT</span><span class="scm-win-dots"><i></i><i></i></span></div>
+              <div class="scm-win-body">
+                <div><span class="scm-tag" data-i18n="placeholder">Заглушка</span></div>
+                <dl class="scm-contacts-list">
+                  <div>
+                    <span class="scm-contacts-ico" aria-hidden="true"><svg class="scm-icon" data-icon="pin" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></span>
+                    <dt data-i18n="address">Адреса</dt>
+                    <dd>[Адреса музею — уточнюється]</dd>
+                  </div>
+                  <div>
+                    <span class="scm-contacts-ico" aria-hidden="true"><svg class="scm-icon" data-icon="clock" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></span>
+                    <dt data-i18n="hours">Години роботи</dt>
+                    <dd><div>Вівторок–неділя: 10:00–18:00</div><div>Понеділок: вихідний</div></dd>
+                  </div>
+                  <div>
+                    <span class="scm-contacts-ico" aria-hidden="true"><svg class="scm-icon" data-icon="phone" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></span>
+                    <dt data-i18n="phone">Телефон</dt>
+                    <dd><a class="scm-link" href="tel:+380000000000">+380 00 000 00 00</a></dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+            <div class="scm-map">
+              <div class="scm-map-pin" aria-hidden="true"><svg class="scm-icon scm-icon-2xl" data-icon="pin" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg></div>
+              <span class="scm-tag" data-i18n="placeholder">Заглушка</span>
+              <a class="scm-btn scm-btn-primary scm-map-route" href="#contacts"><svg class="scm-icon" data-icon="pin" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg><span data-i18n="route">Прокласти маршрут</span></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="scm-footer scm-on-brand">
+    <div class="scm-footer-in">
+      <a class="scm-logo" href="#top">Software and<br>Computer Museum</a>
+      <div class="scm-footer-contacts">
+        <span>[Адреса музею — уточнюється]</span>
+        <a class="scm-link" href="tel:+380000000000">+380 00 000 00 00</a>
+        <span>Вт–Нд 10:00–18:00</span>
+      </div>
+      <div class="scm-lang" role="group" aria-label="Мова сайту" data-i18n-aria="language">
+        <button type="button" data-lang="ua" lang="uk" aria-pressed="true" aria-label="Українська"><svg class="scm-icon scm-icon-s" data-icon="check" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg>UA</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English"><svg class="scm-icon scm-icon-s" data-icon="check" viewBox="0 0 12 12" aria-hidden="true" focusable="false"></svg>EN</button>
+      </div>
+      <div class="scm-footer-copy">© 2026 Software and Computer Museum</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

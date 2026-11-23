@@ -1,5 +1,8 @@
 # Локальні налаштування Claude Code і локального сервера
-.claude/
+# (skills і субагенти зберігаємо в git)
+.claude/*
+!.claude/skills/
+!.claude/agents/
 
 # Робочі документи (не потрібні для сайту)
 handoff.md
